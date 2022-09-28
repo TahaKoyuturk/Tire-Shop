@@ -7,7 +7,7 @@ public class CollectManager : MonoBehaviour
     public List<GameObject> wheelsList = new List<GameObject>();
     public GameObject wheelPrefab;
     public Transform exitPoint;
-    int wheelLimit = 4;
+    int wheelLimit = 3;
     private void OnEnable()
     {
         TriggerManager.OnWheelCollect+=GetWheel;
@@ -22,7 +22,7 @@ public class CollectManager : MonoBehaviour
     {
         if (wheelsList.Count <= wheelLimit) {
             GameObject temp = Instantiate(wheelPrefab,exitPoint);
-            temp.transform.position = new Vector3(exitPoint.position.x,0.5f+((float)wheelsList.Count/5), exitPoint.position.z);
+            temp.transform.position = new Vector3(exitPoint.position.x,0.5f+((float)wheelsList.Count/13), exitPoint.position.z);
             wheelsList.Add(temp);
 
             if (TriggerManager.wheelManager != null)
@@ -37,7 +37,6 @@ public class CollectManager : MonoBehaviour
         {
             Destroy(wheelsList[wheelsList.Count - 1]);
             wheelsList.RemoveAt(wheelsList.Count - 1);
-            print("sa");
         }
     }
     public void GiveWheel()

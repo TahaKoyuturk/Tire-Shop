@@ -63,7 +63,9 @@ public class PlayerMovement : MonoBehaviour
 
     Quaternion CalculateRotation()
     {
-        Quaternion temp = Quaternion.LookRotation(CalculateDirection(),Vector3.up);
+        Quaternion temp ;
+        temp = Quaternion.LookRotation(CalculateDirection(), Vector3.up);
+
         return temp;
     }
     Vector3 CalculateDirection()

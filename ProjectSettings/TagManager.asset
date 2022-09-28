@@ -6,6 +6,10 @@ TagManager:
   tags:
   - CollectArea
   - Car
+  - Lift
+  - Holder
+  - DropTable
+  - Button
   layers:
   - Default
   - TransparentFX

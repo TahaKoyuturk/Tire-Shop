@@ -28,7 +28,7 @@ public class WheelManager : MonoBehaviour
             if (isWorking)
             {
                 GameObject temp = Instantiate(wheelPrefab);
-                temp.transform.position = new Vector3(exitPoint.position.x, 0.556f + wheelCount / 6, exitPoint.position.z);
+                temp.transform.position = new Vector3(exitPoint.position.x, 0.556f + wheelCount / 10, exitPoint.position.z);
                 wheels.Add(temp);
             }
             if (wheels.Count >= 4)
@@ -42,4 +42,5 @@ public class WheelManager : MonoBehaviour
         }
         
     }
+    
 }
