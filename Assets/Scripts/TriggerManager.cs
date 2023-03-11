@@ -57,7 +57,6 @@ public class TriggerManager : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Car"))
         {
-            
             isGiving = true;
             workerManager = other.gameObject.GetComponent<WorkerManager>();
         }
@@ -72,7 +71,6 @@ public class TriggerManager : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Car"))
         {
-            
             isGiving = false;
             workerManager = null;
         }

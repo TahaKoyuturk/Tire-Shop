@@ -35,12 +35,10 @@ public class WorkerManager : MonoBehaviour
         seq.Join(lift2.transform.DOMoveY(0.6f, 2));
         seq.Join(transform.DOMoveY(0.62f, 2));
         yield return new WaitForSeconds(3f);
-        if (this.gameObject.transform.position.x < 0)
-        {
+        if (this.gameObject.transform.position.x < 0){
             transform.DOMoveX(0, 2);
         }
-        StartCoroutine(TimeReverse());
-        
+        //StartCoroutine(TimeReverse());
     }
     
     IEnumerator CarMovingFromLift()
@@ -48,7 +46,6 @@ public class WorkerManager : MonoBehaviour
         StartCoroutine(Time());
         yield return new WaitForSeconds(2f);
         seq = DOTween.Sequence();
-        
         seq.Append(lift1.transform.DOMoveY(0f, 2));
         seq.Join(lift2.transform.DOMoveY(0f, 2));
         yield return new WaitForSeconds(2f);
